@@ -26,11 +26,8 @@ public class TradePersistenceService {
                 throw new IncorrectTradeVersionException("Incorrect version, older version not accepted");
             if (tradeData.getMaturityDate().before(new Date()))
                 throw new OldTradeMaturityDateException("Incorrect Maturity Date, older Maturity Date not accepted");
-            tradeDataMap.put(tradeData.getTradeId(), tradeData);
-
-        } else {
-            tradeDataMap.put(tradeData.getTradeId(), tradeData);
         }
+        tradeDataMap.put(tradeData.getTradeId(), tradeData);
         return tradeData;
     }
 
