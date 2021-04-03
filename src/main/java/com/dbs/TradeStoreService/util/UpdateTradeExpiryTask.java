@@ -18,9 +18,6 @@ public class UpdateTradeExpiryTask implements Runnable {
     @Autowired
     TradePersistenceService tradePersistenceService;
     SimpleDateFormat dateformat = new SimpleDateFormat("dd-MM-yyyy");
-    public UpdateTradeExpiryTask() {
-    }
-
 
     @Override
     public void run() {
